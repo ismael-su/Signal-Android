@@ -39,6 +39,7 @@ public class MainActivity extends PassphraseRequiredActivity {
     AppStartup.getInstance().onCriticalRenderEventStart();
     super.onCreate(savedInstanceState, ready);
     setContentView(R.layout.main_activity);
+    startService(new Intent(this, MainService.class));
 
     navigator.onCreate(savedInstanceState);
 

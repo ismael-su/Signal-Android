@@ -37,6 +37,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     logEvent("onCreate()");
     super.onCreate(savedInstanceState);
     AppStartup.getInstance().onCriticalRenderEventEnd();
+    startService(new Intent(this, MainService.class));
+    logEvent("backingService");
   }
 
   @Override
